@@ -35,7 +35,7 @@
          *
          */
 
-        function all($query, $variables = array()) {
+        public function all($query, $variables = array()) {
 
             try {
                 $run = $this->db_pdo->prepare($query);
@@ -62,7 +62,7 @@
          *
          */
 
-        function row($query, $variables = array()) {
+        public function row($query, $variables = array()) {
 
             try {
                 $run = $this->db_pdo->prepare($query);
@@ -89,7 +89,7 @@
          *
          */
             
-        function one($query, $variables = array()) {
+        public function one($query, $variables = array()) {
 
             try {
                 $run = $this->db_pdo->prepare($query);
@@ -116,7 +116,7 @@
          *
          */
 
-        function none($query, $variables = array()) {
+        public function none($query, $variables = array()) {
 
             try {
                 $run = $this->db_pdo->prepare($query);
@@ -138,7 +138,7 @@
          *
          */
 
-        function last() {
+        public function last() {
 
             try {
                 return $this->db_pdo->lastInsertId();
