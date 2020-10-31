@@ -14,7 +14,7 @@
          *
          */
 
-        function add_users($name, $discord_id, $permissions_id) {
+        private function add_users($name, $discord_id, $permissions_id) {
            
             // Generate random password
             $pass = substr(md5(// REDACTED \\), 4, 10);
@@ -56,7 +56,7 @@
          *
          */
 
-        function edit_users($name, $discord_id, $permissions_id, $artifact_values_id) {
+        private function edit_users($name, $discord_id, $permissions_id, $artifact_values_id) {
 
             try {
                 $this->none(
@@ -94,7 +94,7 @@
          *
          */
 
-        function add_artifact_levels($artifact_id, $level) {
+        private function add_artifact_levels($artifact_id, $level) {
 
             // Loop through artifact variables from sent artifact
             foreach($this->qu_get_all_artifact_variables_from_artifact($artifact_id) as $variable_key => $variable_value) {
@@ -139,7 +139,7 @@
          *
          */
 
-        function edit_artifact_levels($level) {
+        private function edit_artifact_levels($level) {
 
             // Loop through all post fields
             foreach($_POST as $key => $value) {
